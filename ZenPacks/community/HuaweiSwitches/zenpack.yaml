@@ -1,0 +1,107 @@
+name: ZenPacks.community.HuaweiSwitches
+
+classes:
+  HuaweiSwitchDevice:
+    base: [zenpacklib.Device]
+    label: Switch
+
+  HuaweiStackMember:
+    base: [zenpacklib.Component]
+    label: Stack Member
+    monitoring_templates: [HuaweiStackMember]
+    properties:
+      stackpriority:
+        type: int
+        label: Priority
+      stackrole:
+        type: string
+        label: Role
+      stackmac:
+        type: string
+        label: MAC
+      stackmodel:
+        type: string
+        label: Model
+      stackserial:
+        type: string
+        label: Serial
+        label_width: 120
+  
+  HuaweiMPU:
+    base: [zenpacklib.Component]
+    label: MPU
+    monitoring_templates: [HuaweiSwitchMPU]
+    properties:
+      cardmodel:
+        type: string
+        label: Model
+        label_width: 120
+      cardserial:
+        type: string
+        label: Serial
+        label_width: 120
+      cardtype:
+        type: string
+        label: Type
+
+  HuaweiLPU:
+    base: [zenpacklib.Component]
+    label: LPU
+    monitoring_templates: [HuaweiSwitchLPU]
+    properties:
+      cardmodel:
+        type: string
+        label: Model
+        label_width: 120
+      cardserial:
+        type: string
+        label: Serial
+        label_width: 120
+      cardtype:
+        type: string
+        label: Type
+
+
+device_classes:
+  /Network/Switch/Huawei:
+    zProperties:
+      zPythonClass: ZenPacks.community.HuaweiSwitches.HuaweiSwitchDevice
+      zCollectorPlugins:
+        - zenoss.snmp.NewDeviceMap
+        - zenoss.snmp.DeviceMap
+        - zenoss.snmp.InterfaceMap
+        - zenoss.snmp.RouteMap
+        - community.snmp.HuaweiSwitchMap
+      zDeviceTemplates:
+        - Device
+        - HuaweiSwitch
+  /Network/Switch/Huawei/Stack:
+    zProperties:
+      zPythonClass: ZenPacks.community.HuaweiSwitches.HuaweiSwitchDevice
+      zCollectorPlugins:
+        - zenoss.snmp.NewDeviceMap
+        - zenoss.snmp.DeviceMap
+        - zenoss.snmp.InterfaceMap
+        - zenoss.snmp.RouteMap
+        - community.snmp.HuaweiSwitchMap
+        - community.snmp.HuaweiStackMap
+      zDeviceTemplates:
+        - Device
+  /Network/Switch/Huawei/Chassis:
+    zProperties:
+      zPythonClass: ZenPacks.community.HuaweiSwitches.HuaweiSwitchDevice
+      zCollectorPlugins:
+        - zenoss.snmp.NewDeviceMap
+        - zenoss.snmp.DeviceMap
+        - zenoss.snmp.InterfaceMap
+        - zenoss.snmp.RouteMap
+        - community.snmp.HuaweiSwitchMap
+        - community.snmp.HuaweiChassisMap
+      zDeviceTemplates:
+        - Device
+
+class_relationships:
+  - HuaweiSwitchDevice 1:MC HuaweiStackMember
+  - HuaweiSwitchDevice 1:MC HuaweiMPU
+  - HuaweiSwitchDevice 1:MC HuaweiLPU
+ 
