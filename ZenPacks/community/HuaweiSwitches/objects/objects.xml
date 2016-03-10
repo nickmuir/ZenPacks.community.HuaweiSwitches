@@ -46,7 +46,7 @@ False
 s9703
 </property>
 <property type="lines" id="productKeys" mode="w" >
-['.1.3.6.1.4.1.2011.2.226.1']
+['.1.3.6.1.4.1.2011.2.236.1']
 </property><property type="boolean" id="isOS" mode="w" >
 False
 </property>
@@ -56,7 +56,7 @@ False
 s9706
 </property>
 <property type="lines" id="productKeys" mode="w" >
-['.1.3.6.1.4.1.2011.2.226.2']
+['.1.3.6.1.4.1.2011.2.236.2']
 </property><property type="boolean" id="isOS" mode="w" >
 False
 </property>
@@ -66,7 +66,7 @@ False
 s9712
 </property>
 <property type="lines" id="productKeys" mode="w" >
-['.1.3.6.1.4.1.2011.2.226.3']
+['.1.3.6.1.4.1.2011.2.236.3']
 </property><property type="boolean" id="isOS" mode="w" >
 False
 </property>
