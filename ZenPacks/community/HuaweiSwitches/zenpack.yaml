@@ -87,42 +87,42 @@ device_classes:
       zDeviceTemplates:
         - Device
         - HuaweiStandaloneSwitch
-      templates:
-        HuaweiStandaloneSwitch:
-          description: ''
-          targetPythonClass: Products.ZenModel.Device
-          datasources:
-            hwEntityCpuUsage:
-              type: SNMP
-              datapoints:
-                hwEntityCpuUsage: {}
-              oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.5.67108873
-            hwEntityMemUsage:
-              type: SNMP
-              datapoints:
-                hwEntityMemUsage: {}
-              oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.7.67108873
-            hwEntityTemperature:
-              type: SNMP
+    templates:
+      HuaweiStandaloneSwitch:
+        description: ''
+        targetPythonClass: Products.ZenModel.Device
+        datasources:
+          hwEntityCpuUsage:
+            type: SNMP
+            datapoints:
+              hwEntityCpuUsage: {}
+            oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.5.67108873
+          hwEntityMemUsage:
+            type: SNMP
+            datapoints:
+              hwEntityMemUsage: {}
+            oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.7.67108873
+          hwEntityTemperature:
+            type: SNMP
             datapoints:
               hwEntityTemperature: {}
-              oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.11.67108873
-          graphs:
-            CPU Uztilization:
-              units: Percent
-              graphpoints:
-                CPU Utilization:
-                  dpName: hwEntityCpuUsage_hwEntityCpuUsage
-            Memory Utilization:
-              units: Percent
-              graphpoints:
-                Memory Utilization:
-                  dpName: hwEntityMemUsage_hwEntityMemUsage
-            Temperature:
-              units: Celsius
-              graphpoints:
-                Temperature:
-                  dpName: hwEntityTemperature_hwEntityTemperature
+            oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.11.67108873
+        graphs:
+          CPU Uztilization:
+            units: Percent
+            graphpoints:
+              CPU Utilization:
+                dpName: hwEntityCpuUsage_hwEntityCpuUsage
+          Memory Utilization:
+            units: Percent
+            graphpoints:
+              Memory Utilization:
+                dpName: hwEntityMemUsage_hwEntityMemUsage
+          Temperature:
+            units: Celsius
+            graphpoints:
+              Temperature:
+                dpName: hwEntityTemperature_hwEntityTemperature
 
   /Network/Switch/Huawei/Stack:
     zProperties:
@@ -136,42 +136,42 @@ device_classes:
         - community.snmp.HuaweiStackMap
       zDeviceTemplates:
         - Device
-      templates:
-        HuaweiStackMember:
-          description: ''
-          targetPythonClass: Products.ZenModel.Device
-          datasources:
-            hwEntityCpuUsage:
-              type: SNMP
-              datapoints:
-                hwEntityCpuUsage: {}
-              oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.5
-            hwEntityMemUsage:
-              type: SNMP
-              datapoints:
-                hwEntityMemUsage: {}
-              oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.7
+    templates:
+      HuaweiStackMember:
+        description: ''
+        targetPythonClass: Products.ZenModel.Device
+        datasources:
+          hwEntityCpuUsage:
+            type: SNMP
+            datapoints:
+              hwEntityCpuUsage: {}
+            oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.5
+          hwEntityMemUsage:
+            type: SNMP
+            datapoints:
+              hwEntityMemUsage: {}
+            oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.7
           hwEntityTemperature:
             type: SNMP
             datapoints:
               hwEntityTemperature: {}
             oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.11
-          graphs:
-            CPU Utilization:
-              units: Percent
-              graphpoints:
-                Current CPU Utilization:
-                  dpName: hwEntityCpuUsage_hwEntityCpuUsage
-            Memory Utilization:
-              units: Percent
-              graphpoints:
-                Memory Utilization:
-                  dpName: hwEntityMemUsage_hwEntityMemUsage
-            Temperature:
-              units: Celsius
-              graphpoints:
-                Temperature:
-                  dpName: hwEntityTemperature_hwEntityTemperature
+        graphs:
+          CPU Utilization:
+            units: Percent
+            graphpoints:
+              Current CPU Utilization:
+                dpName: hwEntityCpuUsage_hwEntityCpuUsage
+          Memory Utilization:
+            units: Percent
+            graphpoints:
+              Memory Utilization:
+                dpName: hwEntityMemUsage_hwEntityMemUsage
+          Temperature:
+            units: Celsius
+            graphpoints:
+              Temperature:
+                dpName: hwEntityTemperature_hwEntityTemperature
 
   /Network/Switch/Huawei/Chassis:
     zProperties:
@@ -185,79 +185,78 @@ device_classes:
         - community.snmp.HuaweiChassisMap
       zDeviceTemplates:
         - Device
+        - HuaweiChassis
 
-      templates:
-        HuaweiChassis:
-          description: ''
-          targetPythonClass: Products.ZenModel.Device
-          datasources:
-            hwAveragePower:
-              type: SNMP
-              datapoints:
-                hwAveragePower: GAUGE
-              oid: 1.3.6.1.4.1.2011.6.157.1.3.0
-            hwRatedPower:
-              type: SNMP
-              datapoints:
-                hwRatedPower: GAUGE
-              oid: 1.3.6.1.4.1.2011.6.157.1.4.0
-          graphs:
-            Power:
-              height: 100
-              width: 500
-              units: Watts
-              graphpoints:
-                Average Power:
-                  dpName: hwAveragePower_hwAveragePower
-                  rpn: 1000,/
-                Rated Power:
-                  dpName: hwRatedPower_hwRatedPower
-                  rpn: 1000,/
-        HuaweiChassisCard:
-          description: ''
-          targetPythonClass: Products.ZenModel.Device
-          datasources:
-            hwEntPowerUsedInfoPower:
-              type: SNMP
-              datapoints:
-                hwEntPowerUsedInfoPower: GAUGE
-              oid: 1.3.6.1.4.1.2011.5.25.31.1.1.6.1.4
-            hwEntityCpuUsage:
-              type: SNMP
-              datapoints:
-                hwEntityCpuUsage: {}
-              oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.5
-            hwEntityMemUsage:
-              type: SNMP
-              datapoints:
-                hwEntityMemUsage: {}
-              oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.7
-            hwEntityTemperature:
-              type: SNMP
-              datapoints:
-                hwEntityTemperature: GAUGE
-              oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.11
-          graphs:
-            CPU Utilization:
-              units: Percent
-              graphpoints:
-                CPU Utilization:
-                  dpName: hwEntityCpuUsage_hwEntityCpuUsage
-            Memory Utilization:
-              units: Percent
-              graphpoints:
-                Memory Utilization:
-                  dpName: hwEntityMemUsage_hwEntityMemUsage
-            Power:
-              units: Watts
-              graphpoints:
-                Power Usage:
-                  dpName: hwEntPowerUsedInfoPower_hwEntPowerUsedInfoPower
-            Temperature:
-              units: Celsius
-              graphpoints:
-                Temperature:
-                  dpName: hwEntityTemperature_hwEntityTemperature
+    templates:
+      HuaweiChassis:
+        description: ''
+        targetPythonClass: Products.ZenModel.Device
+        datasources:
+          hwAveragePower:
+            type: SNMP
+            datapoints:
+              hwAveragePower: GAUGE
+            oid: 1.3.6.1.4.1.2011.6.157.1.3.0
+          hwRatedPower:
+            type: SNMP
+            datapoints:
+              hwRatedPower: GAUGE
+            oid: 1.3.6.1.4.1.2011.6.157.1.4.0
+        graphs:
+          Power:
+            units: Watts
+            graphpoints:
+              Average Power:
+                dpName: hwAveragePower_hwAveragePower
+                rpn: 1000,/
+              Rated Power:
+                dpName: hwRatedPower_hwRatedPower
+                rpn: 1000,/
+      HuaweiChassisCard:
+        description: ''
+        targetPythonClass: Products.ZenModel.Device
+        datasources:
+          hwEntPowerUsedInfoPower:
+            type: SNMP
+            datapoints:
+              hwEntPowerUsedInfoPower: GAUGE
+            oid: 1.3.6.1.4.1.2011.5.25.31.1.1.6.1.4
+          hwEntityCpuUsage:
+            type: SNMP
+            datapoints:
+              hwEntityCpuUsage: {}
+            oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.5
+          hwEntityMemUsage:
+            type: SNMP
+            datapoints:
+              hwEntityMemUsage: {}
+            oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.7
+          hwEntityTemperature:
+            type: SNMP
+            datapoints:
+              hwEntityTemperature: GAUGE
+            oid: 1.3.6.1.4.1.2011.5.25.31.1.1.1.1.11
+        graphs:
+          CPU Utilization:
+            units: Percent
+            graphpoints:
+              CPU Utilization:
+                dpName: hwEntityCpuUsage_hwEntityCpuUsage
+          Memory Utilization:
+            units: Percent
+            graphpoints:
+              Memory Utilization:
+                dpName: hwEntityMemUsage_hwEntityMemUsage
+          Power:
+            units: Watts
+            graphpoints:
+              Power Usage:
+                dpName: hwEntPowerUsedInfoPower_hwEntPowerUsedInfoPower
+          Temperature:
+            units: Celsius
+            graphpoints:
+              Temperature:
+                dpName: hwEntityTemperature_hwEntityTemperature
 
 class_relationships:
   - HuaweiSwitchDevice 1:MC HuaweiStackMember

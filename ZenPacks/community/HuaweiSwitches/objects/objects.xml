@@ -1,2367 +1,5 @@
 <?xml version="1.0"?>
 <objects>
-<!-- ('', 'zport', 'dmd', 'Devices', 'Network', 'Switch', 'Huawei', 'Chassis', 'rrdTemplates', 'HuaweiSwitchLPU') -->
-<object id='/zport/dmd/Devices/Network/Switch/Huawei/Chassis/rrdTemplates/HuaweiSwitchLPU' module='Products.ZenModel.RRDTemplate' class='RRDTemplate'>
-<property type="string" id="targetPythonClass" mode="w" >
-Products.ZenModel.Device
-</property>
-<tomanycont id='datasources'>
-<object id='hwEntPowerUsedInfoPower' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.4.1.2011.5.25.31.1.1.6.1.4
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='hwEntPowerUsedInfoPower' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='hwEntityCpuUsage' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.4.1.2011.5.25.31.1.1.1.1.5
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='hwEntityCpuUsage' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='hwEntityMemUsage' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.4.1.2011.5.25.31.1.1.1.1.7
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='hwEntityMemUsage' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='hwEntityTemperature' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.4.1.2011.5.25.31.1.1.1.1.11
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='hwEntityTemperature' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-</object>
-</tomanycont>
-<tomanycont id='graphDefs'>
-<object id='CPU Utilization' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-Percent
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
--1
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<tomanycont id='graphPoints'>
-<object id='CPU Utilization' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-${graphPoint/id}
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-hwEntityCpuUsage_hwEntityCpuUsage
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='Memory Utilization' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-Percent
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
--1
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-1
-</property>
-<tomanycont id='graphPoints'>
-<object id='Memory Utilization' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-${graphPoint/id}
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-hwEntityMemUsage_hwEntityMemUsage
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='Power' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-Watts
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
--1
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-3
-</property>
-<tomanycont id='graphPoints'>
-<object id='Power Usage' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-${graphPoint/id}
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-hwEntPowerUsedInfoPower_hwEntPowerUsedInfoPower
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='Temperature' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-Celsius
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
--1
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-2
-</property>
-<tomanycont id='graphPoints'>
-<object id='Temperature' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-${graphPoint/id}
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-hwEntityTemperature_hwEntityTemperature
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-</tomanycont>
-</object>
-<!-- ('', 'zport', 'dmd', 'Devices', 'Network', 'Switch', 'Huawei', 'Chassis', 'rrdTemplates', 'HuaweiSwitchMPU') -->
-<object id='/zport/dmd/Devices/Network/Switch/Huawei/Chassis/rrdTemplates/HuaweiSwitchMPU' module='Products.ZenModel.RRDTemplate' class='RRDTemplate'>
-<property type="string" id="targetPythonClass" mode="w" >
-Products.ZenModel.Device
-</property>
-<tomanycont id='datasources'>
-<object id='hwEntPowerUsedInfoPower' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.4.1.2011.5.25.31.1.1.6.1.4
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='hwEntPowerUsedInfoPower' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='hwEntityCpuUsage' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.4.1.2011.5.25.31.1.1.1.1.5
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='hwEntityCpuUsage' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='hwEntityMemUsage' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.4.1.2011.5.25.31.1.1.1.1.7
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='hwEntityMemUsage' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='hwEntityTemperature' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.4.1.2011.5.25.31.1.1.1.1.11
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='hwEntityTemperature' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-</object>
-</tomanycont>
-<tomanycont id='graphDefs'>
-<object id='CPU Utilization' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-Percent
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
--1
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<tomanycont id='graphPoints'>
-<object id='hwEntityCpuUsage' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-${graphPoint/id}
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-hwEntityCpuUsage_hwEntityCpuUsage
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='Memory Utilization' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-Percent
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
--1
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-1
-</property>
-<tomanycont id='graphPoints'>
-<object id='hwEntityMemUsage' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-${graphPoint/id}
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-hwEntityMemUsage_hwEntityMemUsage
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='Power' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-Watts
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
--1
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-3
-</property>
-<tomanycont id='graphPoints'>
-<object id='Power Usage' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-${graphPoint/id}
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-hwEntPowerUsedInfoPower_hwEntPowerUsedInfoPower
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='Temperature' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-Celsius
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
--1
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-2
-</property>
-<tomanycont id='graphPoints'>
-<object id='Temperature' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-${graphPoint/id}
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-hwEntityTemperature_hwEntityTemperature
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-</tomanycont>
-</object>
-<!-- ('', 'zport', 'dmd', 'Devices', 'Network', 'Switch', 'Huawei', 'Stack', 'rrdTemplates', 'HuaweiStackMember') -->
-<object id='/zport/dmd/Devices/Network/Switch/Huawei/Stack/rrdTemplates/HuaweiStackMember' module='Products.ZenModel.RRDTemplate' class='RRDTemplate'>
-<property type="string" id="targetPythonClass" mode="w" >
-Products.ZenModel.Device
-</property>
-<tomanycont id='datasources'>
-<object id='hwEntityCpuUsage' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.4.1.2011.5.25.31.1.1.1.1.5
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='hwEntityCpuUsage' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='hwEntityMemUsage' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.4.1.2011.5.25.31.1.1.1.1.7
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='hwEntityMemUsage' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='hwEntityTemperature' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.4.1.2011.5.25.31.1.1.1.1.11
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='hwEntityTemperature' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-</object>
-</tomanycont>
-<tomanycont id='graphDefs'>
-<object id='CPU Utilization' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-Percent
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
--1
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<tomanycont id='graphPoints'>
-<object id='Current CPU Utilization' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-${graphPoint/id}
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-hwEntityCpuUsage_hwEntityCpuUsage
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='Memory Utilization' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-Percent
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
--1
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-1
-</property>
-<tomanycont id='graphPoints'>
-<object id='Memory Utilization' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-${graphPoint/id}
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-hwEntityMemUsage_hwEntityMemUsage
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='Temperature' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-Celsius
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
--1
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-2
-</property>
-<tomanycont id='graphPoints'>
-<object id='Temperature' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-${graphPoint/id}
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-hwEntityTemperature_hwEntityTemperature
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-</tomanycont>
-</object>
-<!-- ('', 'zport', 'dmd', 'Devices', 'Network', 'Switch', 'Huawei', 'rrdTemplates', 'HuaweiChassis') -->
-<object id='/zport/dmd/Devices/Network/Switch/Huawei/rrdTemplates/HuaweiChassis' module='Products.ZenModel.RRDTemplate' class='RRDTemplate'>
-<property type="string" id="targetPythonClass" mode="w" >
-Products.ZenModel.Device
-</property>
-<tomanycont id='datasources'>
-<object id='hwAveragePower' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.4.1.2011.6.157.1.3.0
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='hwAveragePower' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='hwRatedPower' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.4.1.2011.6.157.1.4.0
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='hwRatedPower' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-</object>
-</tomanycont>
-<tomanycont id='graphDefs'>
-<object id='Power' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-Watts
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
--1
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<tomanycont id='graphPoints'>
-<object id='Average Power' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-${graphPoint/id}
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="rpn" mode="w" >
-1000,/
-</property>
-<property type="string" id="dpName" mode="w" >
-hwAveragePower_hwAveragePower
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-<object id='Rated Power' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-1
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-${graphPoint/id}
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="rpn" mode="w" >
-1000,/
-</property>
-<property type="string" id="dpName" mode="w" >
-hwRatedPower_hwRatedPower
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-</tomanycont>
-</object>
-<!-- ('', 'zport', 'dmd', 'Devices', 'Network', 'Switch', 'Huawei', 'rrdTemplates', 'HuaweiSwitch') -->
-<object id='/zport/dmd/Devices/Network/Switch/Huawei/rrdTemplates/HuaweiSwitch' module='Products.ZenModel.RRDTemplate' class='RRDTemplate'>
-<property type="string" id="targetPythonClass" mode="w" >
-Products.ZenModel.Device
-</property>
-<tomanycont id='datasources'>
-<object id='hwEntityCpuUsage' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.4.1.2011.5.25.31.1.1.1.1.5.67108873
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='hwEntityCpuUsage' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='hwEntityMemUsage' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.4.1.2011.5.25.31.1.1.1.1.7.67108873
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='hwEntityMemUsage' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='hwEntityTemperature' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.4.1.2011.5.25.31.1.1.1.1.11.67108873
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='hwEntityTemperature' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-</object>
-</tomanycont>
-<tomanycont id='graphDefs'>
-<object id='CPU Uztilization' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-Percent
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
--1
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-1
-</property>
-<tomanycont id='graphPoints'>
-<object id='CPU Utilization' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-${graphPoint/id}
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-hwEntityCpuUsage_hwEntityCpuUsage
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='Memory Utilization' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-Percent
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
--1
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<tomanycont id='graphPoints'>
-<object id='Memory Utilization' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-${graphPoint/id}
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-hwEntityMemUsage_hwEntityMemUsage
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='Temperature' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-Celsius
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
--1
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-2
-</property>
-<tomanycont id='graphPoints'>
-<object id='Temperature' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-${graphPoint/id}
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-hwEntityTemperature_hwEntityTemperature
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-</tomanycont>
-</object>
-<!-- ('', 'zport', 'dmd', 'Devices', 'Network', 'Switch', 'Huawei', 'rrdTemplates', 'ethernetCsmacd_64') -->
-<object id='/zport/dmd/Devices/Network/Switch/Huawei/rrdTemplates/ethernetCsmacd_64' module='Products.ZenModel.RRDTemplate' class='RRDTemplate'>
-<property id='zendoc' type='string'>
-Template for 64-bit interface counters.  Must use SNMP v2c for it to work.
-</property>
-<property type="text" id="description" mode="w" >
-Template for 64-bit interface counters.  Must use SNMP v2c for it to work.
-</property>
-<property type="string" id="targetPythonClass" mode="w" >
-Products.ZenModel.IpInterface
-</property>
-<tomanycont id='datasources'>
-<object id='ifHCInOctets' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property id='zendoc' type='string'>
-The total number of octets received on the interface, including framing characters. This object is a 64-bit version of ifInOctets.
-</property>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.2.1.31.1.1.1.6
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='ifHCInOctets' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property id='zendoc' type='string'>
-The total number of octets received on the interface, including framing characters. This object is a 64-bit version of ifInOctets.
-</property>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-DERIVE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-<property type="string" id="rrdmin" mode="w" >
-0
-</property>
-<property type="string" id="description" mode="w" >
-The total number of octets received on the interface, including framing characters. This object is a 64-bit version of ifInOctets.
-</property>
-<tomanycont id='aliases'>
-<object id='inputOctets__bytes' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
-</object>
-</tomanycont>
-</object>
-</tomanycont>
-</object>
-<object id='ifHCInUcastPkts' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property id='zendoc' type='string'>
-The number of packets, delivered by this sub-layer to a higher (sub-)layer, which were not addressed to a multicast or broadcast address at this sub-layer.  This object is a 64-bit version of ifInUcastPkts.
-</property>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.2.1.31.1.1.1.7
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='ifHCInUcastPkts' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property id='zendoc' type='string'>
-The number of packets, delivered by this sub-layer to a higher (sub-)layer, which were not addressed to a multicast or broadcast address at this sub-layer.  This object is a 64-bit version of ifInUcastPkts.
-</property>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-DERIVE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-<property type="string" id="rrdmin" mode="w" >
-0
-</property>
-<property type="string" id="description" mode="w" >
-The number of packets, delivered by this sub-layer to a higher (sub-)layer, which were not addressed to a multicast or broadcast address at this sub-layer.  This object is a 64-bit version of ifInUcastPkts.
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='ifHCOutOctets' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property id='zendoc' type='string'>
-The total number of octets transmitted out of the interface, including framing characters. This object is a 64-bit version of ifHCOutOctets.
-</property>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.2.1.31.1.1.1.10
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='ifHCOutOctets' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property id='zendoc' type='string'>
-The total number of octets transmitted out of the interface, including framing characters. This object is a 64-bit version of ifHCOutOctets.
-</property>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-DERIVE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-<property type="string" id="rrdmin" mode="w" >
-0
-</property>
-<property type="string" id="description" mode="w" >
-The total number of octets transmitted out of the interface, including framing characters. This object is a 64-bit version of ifHCOutOctets.
-</property>
-<tomanycont id='aliases'>
-<object id='outputOctets__bytes' module='Products.ZenModel.RRDDataPointAlias' class='RRDDataPointAlias'>
-</object>
-</tomanycont>
-</object>
-</tomanycont>
-</object>
-<object id='ifHCOutUcastPkts' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property id='zendoc' type='string'>
-The total number of packets that higher-level protocols requested be transmitted, and which were not addressed to a multicast or broadcast address at this sub-layer, including those that were discarded or not sent. This object is a 64-bit version of ifHCOutUcastPkts.
-</property>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.2.1.31.1.1.1.11
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='ifHCOutUcastPkts' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property id='zendoc' type='string'>
-The total number of packets that higher-level protocols requested be transmitted, and which were not addressed to a multicast or broadcast address at this sub-layer, including those that were discarded or not sent. This object is a 64-bit version of ifHCOutUcastPkts.
-</property>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-DERIVE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-<property type="string" id="rrdmin" mode="w" >
-0
-</property>
-<property type="string" id="description" mode="w" >
-The total number of packets that higher-level protocols requested be transmitted, and which were not addressed to a multicast or broadcast address at this sub-layer, including those that were discarded or not sent. This object is a 64-bit version of ifHCOutUcastPkts.
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='ifInErrors' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property id='zendoc' type='string'>
-For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.
-</property>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.2.1.2.2.1.14
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='ifInErrors' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property id='zendoc' type='string'>
-For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.
-</property>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-DERIVE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-<property type="string" id="rrdmin" mode="w" >
-0
-</property>
-<property type="string" id="description" mode="w" >
-For packet-oriented interfaces, the number of inbound packets that contained errors preventing them from being deliverable to a higher-layer protocol. For character-oriented or fixed-length interfaces, the number of inbound transmission units that contained errors preventing them from being deliverable to a higher-layer protocol.
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='ifOperStatus' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property id='zendoc' type='string'>
-Template for 64-bit interface counters.  Must use SNMP v2c for it to work.
-</property>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-.1.3.6.1.2.1.2.2.1.8
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='ifOperStatus' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property id='zendoc' type='string'>
-Template for 64-bit interface counters.  Must use SNMP v2c for it to work.
-</property>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-GAUGE
-</property>
-<property type="text" id="createCmd" mode="w" >
-RRA:LAST:0.5:1:600
-RRA:AVERAGE:0.5:1:600
-RRA:AVERAGE:0.5:6:600
-RRA:AVERAGE:0.5:24:600
-RRA:AVERAGE:0.5:288:600
-RRA:MAX:0.5:6:600
-RRA:MAX:0.5:24:600
-RRA:MAX:0.5:288:600
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-<property type="string" id="description" mode="w" >
-Template for 64-bit interface counters.  Must use SNMP v2c for it to work.
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='ifOutErrors' module='Products.ZenModel.BasicDataSource' class='BasicDataSource'>
-<property id='zendoc' type='string'>
-For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.
-</property>
-<property select_variable="sourcetypes" type="selection" id="sourcetype" mode="w" >
-SNMP
-</property>
-<property type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="eventClass" mode="w" >
-/Cmd/Fail
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property type="int" id="cycletime" mode="w" >
-300
-</property>
-<property type="string" id="oid" mode="w" >
-1.3.6.1.2.1.2.2.1.20
-</property>
-<property type="boolean" id="usessh" mode="w" >
-False
-</property>
-<property type="string" id="parser" mode="w" >
-Auto
-</property>
-<tomanycont id='datapoints'>
-<object id='ifOutErrors' module='Products.ZenModel.RRDDataPoint' class='RRDDataPoint'>
-<property id='zendoc' type='string'>
-For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.
-</property>
-<property select_variable="rrdtypes" type="selection" id="rrdtype" mode="w" >
-DERIVE
-</property>
-<property type="boolean" id="isrow" mode="w" >
-True
-</property>
-<property type="string" id="rrdmin" mode="w" >
-0
-</property>
-<property type="string" id="description" mode="w" >
-For packet-oriented interfaces, the number of outbound packets that could not be transmitted because of errors. For character-oriented or fixed-length interfaces, the number of outbound transmission units that could not be transmitted because of errors.
-</property>
-</object>
-</tomanycont>
-</object>
-</tomanycont>
-<tomanycont id='graphs'>
-<object id='Errors' module='Products.ZenModel.RRDGraph' class='RRDGraph'>
-<property type="lines" id="dsnames" mode="w" >
-['ifInErrors_ifInErrors', 'ifOutErrors_ifOutErrors']
-</property>
-<property type="int" id="sequence" mode="w" >
-2
-</property>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="int" id="linewidth" mode="w" >
-1
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="boolean" id="summary" mode="w" >
-True
-</property>
-<property type="int" id="miny" mode="w" >
-0
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="lines" id="colors" mode="w" >
-('#00cc00', '#0000ff', '#00ffff', '#ff0000', '#ffff00', '#cc0000', '#0000cc', '#0080c0', '#8080c0', '#ff0080', '#800080', '#0000a0', '#408080', '#808000', '#000000', '#00ff00', '#fb31fb', '#0080ff', '#ff8000', '#800000')
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-</object>
-<object id='Packets' module='Products.ZenModel.RRDGraph' class='RRDGraph'>
-<property type="lines" id="dsnames" mode="w" >
-['ifHCInUcastPkts_ifHCInUcastPkts', 'ifHCOutUcastPkts_ifHCOutUcastPkts']
-</property>
-<property type="int" id="sequence" mode="w" >
-1
-</property>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="int" id="linewidth" mode="w" >
-1
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="boolean" id="summary" mode="w" >
-True
-</property>
-<property type="int" id="miny" mode="w" >
-0
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="lines" id="colors" mode="w" >
-('#00cc00', '#0000ff', '#00ffff', '#ff0000', '#ffff00', '#cc0000', '#0000cc', '#0080c0', '#8080c0', '#ff0080', '#800080', '#0000a0', '#408080', '#808000', '#000000', '#00ff00', '#fb31fb', '#0080ff', '#ff8000', '#800000')
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-</object>
-<object id='Throughput' module='Products.ZenModel.RRDGraph' class='RRDGraph'>
-<property type="lines" id="dsnames" mode="w" >
-['ifHCInOctets_ifHCInOctets', 'ifHCOutOctets_ifHCOutOctets']
-</property>
-<property type="int" id="sequence" mode="w" >
-0
-</property>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="int" id="linewidth" mode="w" >
-1
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="boolean" id="summary" mode="w" >
-True
-</property>
-<property type="int" id="miny" mode="w" >
-0
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="lines" id="colors" mode="w" >
-('#00cc00', '#0000ff', '#00ffff', '#ff0000', '#ffff00', '#cc0000', '#0000cc', '#0080c0', '#8080c0', '#ff0080', '#800080', '#0000a0', '#408080', '#808000', '#000000', '#00ff00', '#fb31fb', '#0080ff', '#ff8000', '#800000')
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-<tomanycont id='thresholds'>
-<object id='high utilization' module='Products.ZenModel.MinMaxThreshold' class='MinMaxThreshold'>
-<property type="string" id="eventClass" mode="w" >
-/Perf/Interface
-</property>
-<property type="int" id="severity" mode="w" >
-3
-</property>
-<property label="DataPoints" type="lines" id="dsnames" mode="w" >
-['ifHCInOctets_ifHCInOctets', 'ifHCOutOctets_ifHCOutOctets']
-</property>
-<property label="Enabled" type="boolean" id="enabled" mode="w" >
-True
-</property>
-<property type="string" id="maxval" mode="w" >
-(here.speed or 1e9) / 8 * .75
-</property>
-<property type="int" id="escalateCount" mode="w" >
-0
-</property>
-</object>
-<object id='ifOperStatusChange' module='Products.ZenModel.ValueChangeThreshold' class='ValueChangeThreshold'>
-<property type="string" id="eventClass" mode="w" >
-/Status/Perf
-</property>
-<property type="int" id="severity" mode="w" >
-2
-</property>
-<property label="DataPoints" type="lines" id="dsnames" mode="w" >
-['ifOperStatus_ifOperStatus']
-</property>
-<property label="Enabled" type="boolean" id="enabled" mode="w" >
-True
-</property>
-</object>
-</tomanycont>
-<tomanycont id='graphDefs'>
-<object id='Errors' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-errors/sec
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
-0
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-2
-</property>
-<tomanycont id='graphPoints'>
-<object id='ifInErrors' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-AREA
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-Receive
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-ifInErrors_ifInErrors
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-<object id='ifOutErrors' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-1
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-Send
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-ifOutErrors_ifOutErrors
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='Packets' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-packets/sec
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
-0
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-1
-</property>
-<tomanycont id='graphPoints'>
-<object id='ifHCInUcastPkts' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-AREA
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-Inbound
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-ifHCInUcastPkts_ifHCInUcastPkts
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-<object id='ifHCOutUcastPkts' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-1
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-Outbound
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="dpName" mode="w" >
-ifHCOutUcastPkts_ifHCOutUcastPkts
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-<object id='Throughput' module='Products.ZenModel.GraphDefinition' class='GraphDefinition'>
-<property type="int" id="height" mode="w" >
-100
-</property>
-<property type="int" id="width" mode="w" >
-500
-</property>
-<property type="string" id="units" mode="w" >
-bits/sec
-</property>
-<property type="boolean" id="log" mode="w" >
-False
-</property>
-<property type="boolean" id="base" mode="w" >
-False
-</property>
-<property type="int" id="miny" mode="w" >
-0
-</property>
-<property type="int" id="maxy" mode="w" >
--1
-</property>
-<property type="boolean" id="hasSummary" mode="w" >
-True
-</property>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<tomanycont id='graphPoints'>
-<object id='ifHCInOctets' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-0
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-AREA
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-Inbound
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="rpn" mode="w" >
-8,*
-</property>
-<property type="string" id="dpName" mode="w" >
-ifHCInOctets_ifHCInOctets
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-<object id='ifHCOutOctets' module='Products.ZenModel.DataPointGraphPoint' class='DataPointGraphPoint'>
-<property type="long" id="sequence" mode="w" >
-1
-</property>
-<property select_variable="lineTypes" type="selection" id="lineType" mode="w" >
-LINE
-</property>
-<property type="long" id="lineWidth" mode="w" >
-1
-</property>
-<property type="boolean" id="stacked" mode="w" >
-False
-</property>
-<property type="string" id="format" mode="w" >
-%5.2lf%s
-</property>
-<property type="string" id="legend" mode="w" >
-Outbound
-</property>
-<property type="long" id="limit" mode="w" >
--1
-</property>
-<property type="string" id="rpn" mode="w" >
-8,*
-</property>
-<property type="string" id="dpName" mode="w" >
-ifHCOutOctets_ifHCOutOctets
-</property>
-<property type="string" id="cFunc" mode="w" >
-AVERAGE
-</property>
-</object>
-</tomanycont>
-</object>
-</tomanycont>
-</object>
 <!-- ('', 'zport', 'dmd', 'Manufacturers', 'HUAWEI Technology Co.,Ltd') -->
 <object id='/zport/dmd/Manufacturers/HUAWEI Technology Co.,Ltd' module='Products.ZenModel.Manufacturer' class='Manufacturer'>
 <property type="string" id="url" mode="w" >
@@ -2373,70 +11,3014 @@ http://www.huawei.com
 []
 </property>
 <tomanycont id='products'>
-<object id='S5700-10P-PWR-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<object id='s7703' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
 <property type="string" id="name" mode="w" >
-S5700-10P-PWR-LI-AC
+s7703
 </property>
 <property type="lines" id="productKeys" mode="w" >
-['.1.3.6.1.4.1.2011.2.23.204']
-</property>
-<property type="boolean" id="isOS" mode="w" >
+['.1.3.6.1.4.1.2011.2.223.1']
+</property><property type="boolean" id="isOS" mode="w" >
 False
 </property>
 </object>
-<object id='S5700-28X-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<object id='s7706' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
 <property type="string" id="name" mode="w" >
-S5700-28X-LI-AC
-</property>
-<property type="lines" id="productKeys" mode="w" >
-['.1.3.6.1.4.1.2011.2.23.206']
-</property>
-<property type="boolean" id="isOS" mode="w" >
-False
-</property>
-</object>
-<object id='S7706' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
-<property type="string" id="name" mode="w" >
-S7706
+s7706
 </property>
 <property type="lines" id="productKeys" mode="w" >
 ['.1.3.6.1.4.1.2011.2.223.2']
-</property>
-<property type="boolean" id="isOS" mode="w" >
+</property><property type="boolean" id="isOS" mode="w" >
 False
 </property>
 </object>
-<object id='S9712' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<object id='s7712' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
 <property type="string" id="name" mode="w" >
-S9712
+s7712
 </property>
 <property type="lines" id="productKeys" mode="w" >
-['.1.3.6.1.4.1.2011.2.236.3']
-</property>
-<property type="boolean" id="isOS" mode="w" >
+['.1.3.6.1.4.1.2011.2.223.3']
+</property><property type="boolean" id="isOS" mode="w" >
 False
 </property>
 </object>
-<object id='V200R003C00SPC300' module='Products.ZenModel.SoftwareClass' class='SoftwareClass'>
+<object id='s9703' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
 <property type="string" id="name" mode="w" >
-V200R003C00SPC300
+s9703
 </property>
 <property type="lines" id="productKeys" mode="w" >
-['V200R003C00SPC300']
-</property>
-<property type="boolean" id="isOS" mode="w" >
-True
+['.1.3.6.1.4.1.2011.2.226.1']
+</property><property type="boolean" id="isOS" mode="w" >
+False
 </property>
 </object>
-<object id='V200R007C00SPC500' module='Products.ZenModel.SoftwareClass' class='SoftwareClass'>
+<object id='s9706' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
 <property type="string" id="name" mode="w" >
-V200R007C00SPC500
+s9706
 </property>
 <property type="lines" id="productKeys" mode="w" >
-['V200R007C00SPC500']
+['.1.3.6.1.4.1.2011.2.226.2']
+</property><property type="boolean" id="isOS" mode="w" >
+False
 </property>
-<property type="boolean" id="isOS" mode="w" >
-True
+</object>
+<object id='s9712' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s9712
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.226.3']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s8016' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s8016
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.11']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3526' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3526
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.12']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3026' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3026
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.13']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3026V' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3026V
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.14']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2008' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2008
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.15']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2016' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2016
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.16']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3526F' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3526F
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.17']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5516' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5516
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.18']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s6506' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s6506
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.19']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3026F' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3026F
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.20']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3526E' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3526E
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.21']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2026' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2026
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.22']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2403H' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2403H
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.23']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3026E' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3026E
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.24']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3026EFM' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3026EFM
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.25']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3026EFS' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3026EFS
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.26']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3526EFM' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3526EFM
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.27']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3526EFS' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3526EFS
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.28']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3050C' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3050C
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.29']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s6503' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s6503
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.30']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s8512' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s8512
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.31']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s8505' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s8505
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.32']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s6506R' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s6506R
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.33']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3026c' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3026c
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.34']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3026g' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3026g
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.35']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3026t' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3026t
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.36']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3552G' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3552G
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.37']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3552P' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3552P
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.38']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3528G' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3528G
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.39']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3528P' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3528P
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.40']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3526c' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3526c
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.41']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3026c-24-12fs' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3026c-24-12fs
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.42']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3026c-24-12fm' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3026c-24-12fm
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.43']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3526c-24-12fs' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3526c-24-12fs
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.44']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3526c-24-12fm' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3526c-24-12fm
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.45']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5012G' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5012G
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.46']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5012G-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5012G-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.47']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5012T-12-10GBC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5012T-12-10GBC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.48']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5012T-12-10GBC-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5012T-12-10GBC-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.49']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5024G-24-20TP' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5024G-24-20TP
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.50']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5024G-24-20TP-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5024G-24-20TP-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.51']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2026Z' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2026Z
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.52']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2026C' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2026C
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.53']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3026G-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3026G-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.54']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3026C-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3026C-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.55']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3026S-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3026S-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.56']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s8505e' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s8505e
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.57']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3552F-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3552F-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.67']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3552F-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3552F-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.68']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='e026' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+e026
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.69']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='e026-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+e026-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.70']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='e050' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+e050
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.71']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2326P-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2326P-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.72']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2326P-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2326P-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.73']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2318P-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2318P-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.74']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2318P-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2318P-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.75']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2309P-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2309P-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.76']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2309P-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2309P-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.77']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3352P-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3352P-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.78']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3352P-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3352P-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.79']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3328TP-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3328TP-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.80']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3328TP-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3328TP-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.81']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3328TP-EI-24S' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3328TP-EI-24S
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.82']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3328TP-SI-24S' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3328TP-SI-24S
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.83']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3352P-EI-24S' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3352P-EI-24S
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.84']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3352P-EI-48S' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3352P-EI-48S
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.85']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3352P-SI-48S' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3352P-SI-48S
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.86']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2309TP-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2309TP-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.87']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2309TP-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2309TP-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.88']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2318TP-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2318TP-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.89']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2318TP-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2318TP-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.90']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2326TP-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2326TP-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.91']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2326TP-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2326TP-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.92']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2352P-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2352P-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.93']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2352P-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2352P-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.94']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5328C-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5328C-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.95']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5328C-EI-24S' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5328C-EI-24S
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.96']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5352C-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5352C-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.97']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5324TP-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5324TP-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.98']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5348TP-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5348TP-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.99']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5324TP-PWR-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5324TP-PWR-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.100']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5348TP-PWR-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5348TP-PWR-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.101']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5328C-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5328C-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.102']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5352C-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5352C-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.103']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5328C-PWR-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5328C-PWR-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.104']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5352C-PWR-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5352C-PWR-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.105']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5328C-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5328C-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.106']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5352C-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5352C-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.107']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2309TP-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2309TP-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.108']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2326TP-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2326TP-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.109']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3328TP-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3328TP-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.110']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3352P-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3352P-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.111']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3328TP-EI-MC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3328TP-EI-MC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.112']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3318TP-EI-MC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3318TP-EI-MC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.113']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2700-9TP-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2700-9TP-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.114']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2700-9TP-EI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2700-9TP-EI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.115']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2700-18TP-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2700-18TP-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.116']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2700-26TP-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2700-26TP-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.117']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2700-26TP-EI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2700-26TP-EI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.118']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2700-52TP-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2700-52TP-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.119']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2700-9TP-SI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2700-9TP-SI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.120']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2700-18TP-SI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2700-18TP-SI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.121']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2700-26TP-SI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2700-26TP-SI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.122']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2700-9TP-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2700-9TP-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.123']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2700-26TP-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2700-26TP-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.124']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-28TP-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-28TP-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.125']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-28TP-EI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-28TP-EI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.126']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-28TP-EI-24S-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-28TP-EI-24S-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.127']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-52TP-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-52TP-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.128']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-52TP-EI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-52TP-EI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.129']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-52TP-EI-24S-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-52TP-EI-24S-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.130']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-52TP-EI-24S-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-52TP-EI-24S-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.131']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-52TP-EI-48S-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-52TP-EI-48S-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.132']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-52TP-EI-48S-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-52TP-EI-48S-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.133']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-28TP-SI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-28TP-SI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.134']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-28TP-SI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-28TP-SI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.135']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-52TP-SI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-52TP-SI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.136']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-28TP-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-28TP-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.137']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-52TP-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-52TP-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.138']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-28TP-EI-MC-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-28TP-EI-MC-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.139']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28C-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28C-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.140']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28C-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28C-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.141']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28C-EI-24S' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28C-EI-24S
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.142']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-52C-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-52C-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.143']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-52C-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-52C-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.144']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-24TP-SI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-24TP-SI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.145']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-24TP-SI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-24TP-SI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.146']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-48TP-SI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-48TP-SI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.147']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-48TP-SI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-48TP-SI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.148']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28C-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28C-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.149']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-52C-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-52C-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.150']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-24TP-PWR-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-24TP-PWR-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.151']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-48TP-PWR-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-48TP-PWR-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.152']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s6324C' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s6324C
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.153']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s6348C' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s6348C
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.154']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5328C-HI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5328C-HI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.155']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5328C-HI-24S' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5328C-HI-24S
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.156']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5306TP-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5306TP-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.157']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3326C-HI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3326C-HI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.158']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5328C-HI-24SA' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5328C-HI-24SA
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.159']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s6700-24-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s6700-24-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.160']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s6700-48-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s6700-48-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.161']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s1728-GWR-4P' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s1728-GWR-4P
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.162']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28P-LI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28P-LI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.163']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28P-PWR-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28P-PWR-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.164']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-52P-LI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-52P-LI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.165']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-52P-PWR-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-52P-PWR-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.166']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28X-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28X-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.167']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-52X-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-52X-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.168']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28C-HI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28C-HI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.169']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28C-HI-24S' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28C-HI-24S
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.170']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-6TP-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-6TP-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.171']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-26C-HI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-26C-HI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.172']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-28C-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-28C-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.173']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-52C-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-52C-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.174']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5310-28P-LI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5310-28P-LI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.175']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5310-52P-LI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5310-52P-LI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.176']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28P-LI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28P-LI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.177']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-52P-LI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-52P-LI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.178']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5310-28P-LI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5310-28P-LI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.179']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5310-52P-LI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5310-52P-LI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.180']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700S-28P-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700S-28P-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.181']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700S-52P-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700S-52P-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.182']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s1700-28GFR-4P-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s1700-28GFR-4P-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.183']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s1700-52GFR-4P-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s1700-52GFR-4P-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.184']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s1700-28FR-2T2P-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s1700-28FR-2T2P-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.185']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s1700-52FR-2T2P-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s1700-52FR-2T2P-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.186']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28C-PWR-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28C-PWR-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.187']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-52C-PWR-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-52C-PWR-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.188']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5710-28C-PWR-LI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5710-28C-PWR-LI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.189']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5710-52C-PWR-LI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5710-52C-PWR-LI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.190']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5710-28C-LI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5710-28C-LI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.191']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5710-52C-LI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5710-52C-LI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.192']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='e6000' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+e6000
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.193']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5710-28C-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5710-28C-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.194']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5710-52C-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5710-52C-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.195']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2710-26TP-PWR-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2710-26TP-PWR-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.196']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2710-52P-SI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2710-52P-SI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.197']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2710-52P-PWR-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2710-52P-PWR-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.198']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2700-52P-PWR-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2700-52P-PWR-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.199']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-52P-PWR-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-52P-PWR-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.200']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-28TP-PWR-SI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-28TP-PWR-SI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.201']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5710-108C-PWR-HI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5710-108C-PWR-HI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.202']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-10P-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-10P-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.203']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-10P-PWR-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-10P-PWR-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.204']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-26X-SI-12S-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-26X-SI-12S-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.205']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28X-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28X-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.206']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28X-LI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28X-LI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.207']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-52X-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-52X-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.208']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-52X-LI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-52X-LI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.209']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28X-PWR-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28X-PWR-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.210']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-52X-PWR-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-52X-PWR-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.211']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5710-108C-HI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5710-108C-HI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.212']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-10P-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-10P-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.213']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5310-28C-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5310-28C-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.214']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5310-52C-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5310-52C-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.215']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-28X-LI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-28X-LI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.216']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-28X-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-28X-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.217']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28X-LI-24S-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28X-LI-24S-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.218']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-28X-LI-24S-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-28X-LI-24S-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.219']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28X-LI-24S-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28X-LI-24S-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.220']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-28X-LI-24S-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-28X-LI-24S-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.221']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2751-28TP-PWR-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2751-28TP-PWR-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.222']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2350-28TP-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2350-28TP-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.223']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2750-28TP-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2750-28TP-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.224']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2750-28TP-PWR-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2750-28TP-PWR-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.225']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2750-20TP-PWR-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2750-20TP-PWR-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.226']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2350-28TP-PWR-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2350-28TP-PWR-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.227']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2350-20TP-PWR-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2350-20TP-PWR-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.228']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2328P-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2328P-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.229']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3300-52P-EI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3300-52P-EI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.230']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s1700-10GF-2P-PWR' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s1700-10GF-2P-PWR
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.231']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s1700-28GFR-4P-PWR' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s1700-28GFR-4P-PWR
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.232']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s1700-52GFR-4P-PWR' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s1700-52GFR-4P-PWR
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.233']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s1700-28FR-2T2P-PWR' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s1700-28FR-2T2P-PWR
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.234']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s1700-10GF-2P' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s1700-10GF-2P
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.235']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s1700-24GR' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s1700-24GR
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.236']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s3700-28TP-EI-24S-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s3700-28TP-EI-24S-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.237']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5701-28X-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5701-28X-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.238']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5701-28X-LI-24S-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5701-28X-LI-24S-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.239']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28P-LI-BAT' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28P-LI-BAT
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.240']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28P-LI-4AH' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28P-LI-4AH
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.241']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28P-LI-24S-BAT' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28P-LI-24S-BAT
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.242']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28P-LI-24S-4AH' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28P-LI-24S-4AH
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.243']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-28P-LI-BAT' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-28P-LI-BAT
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.244']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-28P-LI-4AH' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-28P-LI-4AH
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.245']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-28P-LI-24S-BAT' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-28P-LI-24S-BAT
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.246']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-28P-LI-24S-4AH' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-28P-LI-24S-4AH
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.247']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-52X-LI-48CS-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-52X-LI-48CS-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.248']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-52X-LI-48CS-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-52X-LI-48CS-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.249']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-52X-LI-48CS-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-52X-LI-48CS-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.250']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-52X-LI-48CS-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-52X-LI-48CS-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.251']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5310-108C-PWR-HI' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5310-108C-PWR-HI
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.252']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-10P-PWR-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-10P-PWR-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.253']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-28P-PWR-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-28P-PWR-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.254']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-52P-PWR-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-52P-PWR-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.255']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-52X-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-52X-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.256']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-52X-LI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-52X-LI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.257']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-28X-PWR-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-28X-PWR-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.258']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5300-52X-PWR-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5300-52X-PWR-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.259']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2350-28TP-EI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2350-28TP-EI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.260']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28TP-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28TP-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.261']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5700-28TP-PWR-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5700-28TP-PWR-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.262']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5701-28TP-PWR-LI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5701-28TP-PWR-LI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.263']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-56C-HI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-56C-HI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.264']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-56C-PWR-HI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-56C-PWR-HI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.265']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-32C-HI-24S-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-32C-HI-24S-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.266']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s1720-28GFR-4TP' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s1720-28GFR-4TP
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.267']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s1720-20GFR-4TP' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s1720-20GFR-4TP
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.268']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s2720-28TP-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s2720-28TP-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.269']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-36C-EI-28S-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-36C-EI-28S-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.270']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-36C-EI-28S-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-36C-EI-28S-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.271']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-36C-EI-28S-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-36C-EI-28S-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.272']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-56C-EI-48S-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-56C-EI-48S-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.273']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-56C-EI-48S-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-56C-EI-48S-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.274']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-56C-EI-48S-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-56C-EI-48S-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.275']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-36C-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-36C-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.276']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-36C-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-36C-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.277']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-36C-EI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-36C-EI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.278']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-36PC-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-36PC-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.279']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-36PC-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-36PC-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.280']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-36PC-EI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-36PC-EI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.281']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-56C-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-56C-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.282']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-56C-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-56C-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.283']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-56C-EI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-56C-EI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.284']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-56PC-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-56PC-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.285']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-56PC-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-56PC-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.286']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-56PC-EI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-56PC-EI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.287']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-36C-PWR-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-36C-PWR-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.288']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-36C-PWR-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-36C-PWR-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.289']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-36C-PWR-EI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-36C-PWR-EI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.290']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-56C-PWR-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-56C-PWR-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.291']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-56C-PWR-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-56C-PWR-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.292']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-56C-PWR-EI-AC1' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-56C-PWR-EI-AC1
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.293']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-32X-EI-24S-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-32X-EI-24S-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.294']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-32X-EI-24S-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-32X-EI-24S-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.295']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-32X-EI-24S-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-32X-EI-24S-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.296']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-50X-EI-46S-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-50X-EI-46S-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.297']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-50X-EI-46S-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-50X-EI-46S-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.298']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-50X-EI-46S-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-50X-EI-46S-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.299']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-32X-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-32X-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.300']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-32X-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-32X-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.301']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-32X-EI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-32X-EI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.302']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-32P-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-32P-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.303']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-32P-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-32P-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.304']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-32P-EI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-32P-EI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.305']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-52X-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-52X-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.306']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-52X-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-52X-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.307']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-52X-EI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-52X-EI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.308']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-52P-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-52P-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.309']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-52P-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-52P-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.310']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-52P-EI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-52P-EI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.311']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5720-50X-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5720-50X-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.312']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-50X-EI-AC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-50X-EI-AC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.313']
+</property><property type="boolean" id="isOS" mode="w" >
+False
+</property>
+</object>
+<object id='s5320-50X-EI-DC' module='Products.ZenModel.HardwareClass' class='HardwareClass'>
+<property type="string" id="name" mode="w" >
+s5320-50X-EI-DC
+</property>
+<property type="lines" id="productKeys" mode="w" >
+['.1.3.6.1.4.1.2011.2.23.314']
+</property><property type="boolean" id="isOS" mode="w" >
+False
 </property>
 </object>
 </tomanycont>
